@@ -10,7 +10,8 @@ app.secret_key = "i_am_not_feeling_sleepy_so_i_am_coding_this"
 def mostread():
     args = request.args
     q = args.get("q")
-    htmlBody = requests.get(f"https://www.google.com/search?channel=fs&client=ubuntu&q={q}&lr=lang_pt")
+    lang = args.get("lang")
+    htmlBody = requests.get(f"https://www.google.com/search?channel=fs&client=ubuntu&q={q}&lr=lang_{lang}")
     soup = BeautifulSoup(htmlBody.content, "html.parser")  
     contentTextList = soup.find_all(class_="Gx5Zad xpd EtOod pkphOe")
     
