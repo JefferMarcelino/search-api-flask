@@ -30,4 +30,4 @@ Response example:
 </pre>
 
 The search answer comes from a google search.
-<img src="./.github/1.png" width="50%" float="center"></img>
+<img src="./.github/1.png" float="center"></img>
